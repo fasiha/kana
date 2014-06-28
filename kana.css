@@ -1,0 +1,37 @@
+@font-face
+{
+font-family: mplus-2c-thin;
+src: url('http://mplus-fonts.sourceforge.jp/webfonts/mplus-2c-thin.ttf')
+     format("truetype");
+}
+
+@font-face {
+font-family: 'mplus-2c-thin-local';
+src:
+local('mplus-2c-thin'),
+local('mplus-2c-thin.ttf'),
+local('mplus-2c'),
+local('M+ 2c'),
+local('M+ 2c thin');
+}
+
+
+table {
+    border-spacing: 0px;
+
+    font-family: 'mplus-2c-thin-local', "mplus-2c-thin", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "Hiragino Mincho Pro","メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid #dddddd;
+}
+
+.jpn {
+    font-size: 3em;
+}
+
+.eng {
+    font-size: 1.25em;
+}
