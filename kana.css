@@ -15,12 +15,17 @@ local('M+ 2c'),
 local('M+ 2c thin');
 }
 
+@font-face {
+font-family: 'kanjistrokeorder-local';
+src:
+local('KanjiStrokeOrders'),
+local('KanjiStrokeOrders.ttf');
+}
+
 
 table {
     border-spacing: 0px;
-
     font-family: 'mplus-2c-thin-local', "mplus-2c-thin", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "Hiragino Mincho Pro","メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-
     border-collapse: collapse;
 }
 

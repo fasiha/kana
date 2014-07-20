@@ -124,3 +124,15 @@ var td = tr.selectAll("td")
              .append("td")
              .html(function(d, i, j) { return d; })
              .style({ "text-align" : "center" });
+
+/* Hacker access: render as stroke order! 
+Currently only works if you have the Kanji Stroke Order font locally installed.
+There is a webfont version online...
+*/
+function strokeOrder() {
+  var table = document.getElementsByTagName('table')[0];
+  table.style.fontFamily = 'kanjistrokeorder-local';
+  var jpn = document.getElementsByClassName('jpn');
+  for (j in jpn) {jpn[j].style.fontSize="9em";}
+  
+}
