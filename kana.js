@@ -1,8 +1,7 @@
 /*
 This is the most complicated-but-not-mad way to build a table of
 hiragana, katakana, and roumaji. I build the table programmatically
-using Javascript and Unicode fiends, and then display it in the
-browser using D3.js.
+using Javascript and Unicode fiends, and then print it as HTML.
 */
 
 // Build the roumaji table
@@ -104,35 +103,14 @@ for (vidx = 0; vidx < vowels.length; vidx++) {
             katakana_value
                 = String.fromCharCode(hira_table[cidx][vidx] + diff_hira_kata);
         }
-        val = '<span class="jpn">' + hiragana_value + katakana_value
-              + '</span><br><span class="eng">' + val + "</span>";
+        val = '<span class="jp">' + hiragana_value + katakana_value
+              + '</span><br><span class="en">' + val + "</span>";
         arrPrint[vidx][consonants.length - 1 - cidx] = val;
     }
 }
 
-// Display
-var tr = d3.select("body")
-             .append("table")
-             .selectAll("tr")
-             .data(arrPrint)
-             .enter()
-             .append("tr");
-
-var td = tr.selectAll("td")
-             .data(function(d) { return d; })
-             .enter()
-             .append("td")
-             .html(function(d, i, j) { return d; })
-             .style({ "text-align" : "center" });
-
-/* Hacker access: render as stroke order! 
-Currently only works if you have the Kanji Stroke Order font locally installed.
-There is a webfont version online...
-*/
-function strokeOrder() {
-  var table = document.getElementsByTagName('table')[0];
-  table.style.fontFamily = 'kanjistrokeorder-local';
-  var jpn = document.getElementsByClassName('jpn');
-  for (j in jpn) {jpn[j].style.fontSize="9em";}
-  
-}
+console.log(arrPrint
+                .map(tr => "<tr>"
+                           + tr.flatMap(td => `<td>${td}</td>`).join('\n')
+                           + "</tr>\n\n")
+                .join(''))

@@ -1,5 +1,5 @@
 ---
-Language:        Cpp
+Language:        JavaScript
 # BasedOnStyle:  WebKit
 AccessModifierOffset: -4
 ConstructorInitializerIndentWidth: 4

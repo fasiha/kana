@@ -1,42 +1,54 @@
-@font-face
-{
-font-family: mplus-2c-thin;
-src: url('http://mplus-fonts.sourceforge.jp/webfonts/mplus-2c-thin.ttf')
-     format("truetype");
+@font-face {
+  font-family: mplus-2c-thin;
+  src: url("http://mplus-fonts.sourceforge.jp/webfonts/mplus-2c-thin.ttf")
+    format("truetype");
 }
 
 @font-face {
-font-family: 'mplus-2c-thin-local';
-src:
-local('mplus-2c-thin'),
-local('mplus-2c-thin.ttf'),
-local('mplus-2c'),
-local('M+ 2c'),
-local('M+ 2c thin');
+  font-family: "mplus-2c-thin-local";
+  src: local("mplus-2c-thin"), local("mplus-2c-thin.ttf"), local("mplus-2c"),
+    local("M+ 2c"), local("M+ 2c thin");
 }
 
 @font-face {
-font-family: 'kanjistrokeorder-local';
-src:
-local('KanjiStrokeOrders'),
-local('KanjiStrokeOrders.ttf');
+  font-family: "kanjistrokeorder-local";
+  src: local("KanjiStrokeOrders"), local("KanjiStrokeOrders.ttf");
 }
-
 
 table {
-    border-spacing: 0px;
-    font-family: 'mplus-2c-thin-local', "mplus-2c-thin", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "Hiragino Mincho Pro","メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-    border-collapse: collapse;
+  border-spacing: 0px;
+  font-family: "mplus-2c-thin-local", "mplus-2c-thin", "ヒラギノ角ゴ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "Hiragino Mincho Pro", "メイリオ", Meiryo,
+    "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  height: 100%;
 }
 
 td {
-    border: 1px solid #dddddd;
+  border: 1px solid #ddd;
+  text-align: center;
 }
 
-.jpn {
-    font-size: 3em;
+.jp {
+  font-size: 3em;
 }
 
-.eng {
-    font-size: 1.25em;
+.en {
+  font-size: 1.25em;
+}
+
+body {
+  color: #444;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #c9d1d9;
+    background: #0d1117;
+  }
+
+  td {
+    border: 1px solid #333;
+    text-align: center;
+  }
 }
